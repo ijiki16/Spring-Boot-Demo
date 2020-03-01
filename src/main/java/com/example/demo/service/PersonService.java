@@ -10,6 +10,11 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
+
+/*
+ * servis klasi romelshic sheqmnilia bazis interfeisi da misi romelime implementacia aris sheqmnili
+ * "aq iwereba biznes logika"
+ */
 @Service
 public class PersonService {
 	private final PersonDao personDao;
@@ -32,5 +37,13 @@ public class PersonService {
 
 	public List<Person> getAllPeople(){
 		return personDao.selectAllPeople();
+	}
+
+	public int deletePerson(UUID id){
+		return personDao.delletPersonById(id);
+	}
+
+	public int updatePerson(UUID id, Person person){
+		return  personDao.updatePersonById(id, person);
 	}
 }
