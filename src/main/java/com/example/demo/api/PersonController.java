@@ -3,6 +3,7 @@ package com.example.demo.api;
 import com.example.demo.model.Person;
 import com.example.demo.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,6 +22,8 @@ import java.util.UUID;
  */
 
 //web brauzerizes misamarti (romel saitze dav-Post-ot
+
+@CrossOrigin(origins = "*")
 @RequestMapping("api/v1/person")
 @RestController
 public class PersonController {
